@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="theme-color" content="red" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    
+  </head>
+  <body>
+    <!--Incluyendo header-->
+    <%- include('layouts/header'); -%>
+
+    <!--Contenido Principal-->
+    <%- include('content/indexContent'); -%>
+
+    <!--Footer-->
+    <%- include('layouts/footer'); -%>
+
+    <script src="/javascripts/jquery-3.5.1.slim.min.js"></script>
+    <script src="/javascripts/jquery-3.5.1.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/popper.min.js"></script>
+    <script src="/javascripts/jquery.simplePagination.js"></script>
+    <script src="/javascripts/main/frmmain.js"></script>
+    <!-- El siguiente script, contiene la funcion para paginar el contenido de libros -->
+    <script src="/listBook.js"></script>
+
+<!--
+<style>
+  .container2{
+    padding: 15px;
+    overflow: hidden;
+    width: 450px;
+    display: flex;
+    margin: 0 auto;
+  }
+  .list-item {
+    border: 1px solid #eee;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    width: 30%;
+    margin: 15px;
+    position: relative;
+    cursor: pointer;
+  }
+  .list-item img {
+    width: 100%;
+    height: 400;
+    object-fit: cover;
+
+  }
+  .list-item .text {
+    text-align: center;
+  }
+  .text h3 {
+    font-size: 24px;
+  }
+  .text p {
+    font-size: 18px;
+  }
+  .description .d-text {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    background: gray;
+    transition: all 1s ease;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  .description .d-text {
+    padding: 15px;
+  }
+
+  .d-text h3 {
+    font-size: 16px;
+  }
+  .list-item:hover .description{
+    opacity: 1;
+  }
+  .simple-pagination ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .simple-pagination li {
+    display: inline-block;
+    margin: 2px;
+  }
+  .simple.pagination li a,
+  .simple-pagination li span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #252525;
+    border-radius: 4px;
+    margin: 5px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, .1), 0 2px 5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+  }
+  .simple-pagination li a:hover {
+    background: #000;
+    color: #fff;
+  }
+  .simple-pagination .current {
+    color: #fff;
+    background-color: #000;
+  }
+  .simple-pagination .prev.current,
+  .simple-pagination .next.current {
+    background: rgb(214, 21, 21);
+    border: none;
+    font-weight: 700;
+  }
+  #paginar .prev.current{
+    background-color: salmon;
+    color: slateblue;
+  }
+  #paginar ul li a {
+    background-color: springgreen;
+    color: turquoise;
+  }
+  #paginar ul li a .prev.current,#paginar ul li a .next.current {
+    background-color: rgb(11, 45, 156);
+    color: rgb(129, 131, 131);
+  }
+</style>
+    <div class="container2">
+      <div class="list-wrapper">
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="content2">
+            <img src="/images/img/book.png" alt="Hola Mundo" />
+            <div class="text">
+              <h3>Titlle</h3>
+              <p>IMBD ?</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt eos nobis, vero soluta sint corporis iure quae omnis
+                quam. Voluptatem enim voluptatibus ipsum architecto est
+                necessitatibus cumque consequuntur officia alias.
+              </p>
+              <h4>Director</h4>
+              <p>John Doe</p>
+            </div>
+          </div>
+        </div><div id="pagination-container"></div>
+      </div>
+      
+    </div>
+
+    <script>
+
+    </script>-->
+    <!--    <script src="/javascripts/archivos/frmbook.js"></script>-->
+  </body>
+</html>

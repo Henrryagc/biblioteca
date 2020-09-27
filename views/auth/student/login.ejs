@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="/stylesheets/student/login.css">
+<title>Estudiante</title>
+<style>
+ #verBiblioteca {
+	position: fixed;
+	display: flex;
+	right: 25px;
+	top: 25px;
+	background-color: #fff;
+	width: 100px;
+	height: 50px;
+	border-radius: 15px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	transition: .5s;
+ }
+ #verBiblioteca:hover {
+	 background-color: #fffc;
+	 transition: .5s;
+	 color: #000c;
+	 color: #e8998d;
+	 font-weight: 550;
+ }
+</style>
+<h2>Iniciar Sesión o Crear Cuenta Nueva</h2> <a id="verBiblioteca" href="/">Ver Biblioteca</a>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Crear Cuenta</h1>
+			<!--<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        <span>or use your email for registration</span>
+        -->
+			<input type="text" placeholder="Nombres" />
+			<input type="text" placeholder="Apellidos" />
+            <input type="text" placeholder="Celular" />
+            <input type="text" placeholder="Usuario" />
+            <input type="password" placeholder="Contraseña" />
+			<button>Guardar</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/student/validar" method="POST">
+			<h1>Iniciar Sesión</h1>
+			<!--<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        <span>or use your account</span>
+        -->
+			
+			<input name="user" type="text" placeholder="Usuario" />
+			<input name="password"	type="password" placeholder="Contraseña" />
+			<a href="#">¿No recuerdas tu contraseña?</a>
+			<button>Ingresar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Hola, ¡Estudiante!</h1>
+				<p>Ingresa tus datos para crear una cuenta nueva e ingresar a la biblioteca virtual</p>
+				<button class="ghost" id="signIn">INGRESAR</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hola, ¡Estudiante!</h1>
+				<p>Coloca tu usuario y contraseña para iniciar sesión y gestionar tu historial de libros descargados.</p>
+				<button class="ghost" id="signUp">REGISTRAR</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+<footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+		- Read how I created this and how you can join the challenge
+		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+	</p>
+</footer> -->
+<body>
+    <script src="/javascripts/student/login.js"></script>
+</body>

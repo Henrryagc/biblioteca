@@ -1,0 +1,70 @@
+<!--Incluyendo header-->
+<%- include('../admin/adminHeader'); -%>
+<link rel="stylesheet" href="/stylesheets/admin/book.css">
+<div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Lista de Libros</h2>
+          <nav class="navbar navbar-light">
+            <form action="/admin/book/see" method="POST" class="form-inline">
+              <input type="checkbox" name="titulo" required><label for="">Titulo</label>
+              <input type="checkbox" name="autor"><label for="">Autor</label>
+              <input type="checkbox" name="materia"><label for="">Materia</label>              
+              <input type="checkbox" name="idioma"><label for="">Idioma</label>
+              <input type="checkbox" name="editorial"><label for="">Editorial</label>
+              <input name="buscar" class="form-control mr-sm-2" type="search" placeholder="Titulo, Autor, Materia, Idioma, Editorial" aria-label="Search">
+              <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            </nav>
+          </div>
+          <div class="col col-lg-2">
+            <div class="registro">
+                <a href="/admin/book/insertar" >
+                Nuevo Libro
+                </a>
+            </div>
+          </div>
+
+    </div>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Idioma</th>
+            <th scope="col">Editorial</th>
+            <th scope="col">Páginas</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Materia</th>
+            <th scope="col">Registrado</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% var i=1; books.forEach(function(book){ %>
+          <tr class="table-info">            
+            <th scope="row"><%= i++;%></th>
+            <td ><%- book.titulo %></td>
+            <td><%- book.autor %></td>
+            <td><%- book.idioma %></td>
+            <td><%- book.editorial %></td>
+            <td><%- book.paginas %></td>
+            <td><%- book.isbn %></td>
+            <td><%- book.nombre %></td>
+            <td><%- book.fechaRegistro.toDateString() %></td>
+            <td class="td">
+                <a href="/admin/book/eliminar/<%= book.idLibro %>" class="btn btn-danger">
+                Eliminar
+                </a>
+                <a href="/admin/book/editar/<%= book.idLibro %>" class="btn btn-warning">
+                Editar
+                </a>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+</div>
+
+<%- include('../admin/adminFooter'); -%>

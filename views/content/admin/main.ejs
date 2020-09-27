@@ -1,0 +1,34 @@
+<!--Incluyendo header-->
+<%- include('admin/adminHeader'); -%>
+
+<link rel="stylesheet" href="/stylesheets/admin/main.css" />
+<h3>Administración de la Biblioteca Escolar</h3>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <img src="/images/4017146.jpg" class="card-img-top" alt="" />
+      <a style="color: gainsboro" href="http://www.freepik.com"
+        >Designed by Freepik</a
+      >
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+          Hola <span style="color:#6c9a8b;text-transform:uppercase"><%= data.nombre %></span
+          >, puedes ingresar nuevos materiales para la biblioteca virtual...
+        </h5>
+        <p class="card-text">
+          Lee con mucho cuidado las distintas opciones para poder ingresar un
+          nuevo material de la manera más adecuada posible, esto para evitar
+          molestias a los estudiantes a la hora de consultar los materiales...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('admin/adminFooter'); -%>

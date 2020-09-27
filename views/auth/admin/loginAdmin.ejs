@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/admin/login.css" />
+    <title>Administrador</title>
+  </head>
+  <body>
+    <h1>Iniciar como Administrador</h1>
+    <form action="/admin/validar" method="POST">
+      <div class="form">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="user">Nombre de Usuario</label>
+            <input type="text" name="user" id="admin-user" class="form-control" required/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="password">Nombre de Usuario</label>
+            <input type="password" name="password" id="admin-password" class="form-control" required/>
+          </div>
+        </div>
+        <button id="log-btn" type="submit" class="btn btn-success">
+          Ingresar
+        </button>
+        <!-- Button trigger modal -->
+        <a
+          id="reg-btn"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+          >Registrar</a>
+        <p><span><a id="a-recuperar" href="#">¿No recuerdas tu contraseña?</a></span></p>
+      </div>      
+    </form>
+
+    <% if (isTrue) { %>
+    <h2 style="margin-top: 1em;">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert" style="width: 500px; margin:0 auto;">
+        <strong>¡Error...!</strong> Existen algunos errores, ingrese datos correctos.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </h2>
+    <% } %> 
+    
+    <% if(isTrue){ %>
+    <h1></h1>
+    <% } else{ %>
+    <h1></h1>
+    <% } %>
+
+    <div id="msgLogin">
+      <div class="alert alert-warning" role="alert"  style="margin: 0 auto;color: deeppink; width: 360px;">
+        ...se te envio un codigo al celular...!
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"      
+    >
+      <div class="modal-dialog">
+        <form action="/admin/insertar" method="POST">
+        <div class="modal-content" style="background:#027571;">
+          <div class="modal-header">
+            <h5
+              class="modal-title"
+              id="exampleModalLabel"
+              style="font-weight: 700;"
+            >
+              Crear Cuenta Administrador
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              style="
+                background-color: rgba(247, 37, 37, 0.767);
+                border-radius: 0.2em;
+              "
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="color: black;">
+            <!--Nombres-->
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">
+                      <img src="/images/icon/person-fill.svg" alt="" />
+                    </span>
+                  </div>
+                  <input
+                    id="nombres"
+                    placeholder="Nombres"
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    name="a_nombres"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Apellidos-->
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm"
+                      ><img src="/images/icon/person-fill.svg" alt="" /></span
+                    >
+                  </div>
+                  <input
+                    id="apellidos"
+                    placeholder="Apellidos"
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    name="a_apellidos"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--DNI-->
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm"
+                      ><img src="/images/icon/credit-card-2-front-fill.svg" alt=""></span
+                    >
+                  </div>
+                  <input
+                    id="dni"
+                    placeholder="DNI"
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    name="a_dni"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Nombre Usuario-->
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm"
+                      ><img src="/images/icon/person-fill.svg" alt="" /></span
+                    >
+                  </div>
+                  <input
+                    id="nombreUsuario"
+                    placeholder="Nombre Usuario"
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    name="a_usuario"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Contraseña-->
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm"
+                      ><img src="/images/icon/lock-fill.svg" alt=""></span
+                    >
+                  </div>
+                  <input
+                    id="contrasenaUsuario"
+                    placeholder="**********"
+                    type="password"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    name="a_contrasena"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--correo-->
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm"
+                      ><img src="/images/icon/mailbox2.svg" alt=""></span
+                    >
+                  </div>
+                  <input
+                    id="correo"
+                    placeholder="Correo electrónico"
+                    type="email"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    name="a_correo"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--celular-->
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm"
+                      ><img src="/images/icon/telephone-fill.svg" alt=""></span
+                    >
+                  </div>
+                  <input
+                    id="celular"
+                    placeholder="Celular"
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    name="a_celular"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a type="button"
+            class="btn btn-primary"
+            data-dismiss="modal">
+            Cancelar
+          </a>
+            <button type="submit" type="button" class="btn btn-success">Guardar</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    <script src="/javascripts/jquery-3.5.1.slim.min.js"></script>
+    <script src="/javascripts/jquery-3.5.1.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/popper.min.js"></script>
+    <script src="/javascripts/admin/login.js"></script>
+  </body>
+</html>

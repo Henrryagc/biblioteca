@@ -1,0 +1,90 @@
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/fileinput.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <link rel="stylesheet" href="/stylesheets/admin/admin.css" />
+
+    <title>Administrador</title>
+  </head>
+<!-- Estilos Personalizados-->
+<link rel="stylesheet" href="/stylesheets/admin/header.css">
+<!--Navegador-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <a class="navbar-brand" href="/"><strong>Biblioteca Escolar</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a id="a-main" class="nav-link" href="/admin">Inicio<span class="sr-only">(current)</span></a>
+        </li>
+        <li  class="nav-item dropdown">
+          <a id="a-cuenta" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Libros
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="a-edit" class="dropdown-item" href="/admin/book/insertar">Nuevo Libro</a>
+            <a class="dropdown-item" href="/admin/book/see">Lista de Libros</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">...</a>
+          </div>
+        </li>
+        <li  class="nav-item dropdown">
+          <a id="a-cuenta" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Peliculas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="a-edit" class="dropdown-item" href="/admin/movie/see">Nueva Pelicula</a>
+            <a class="dropdown-item" href="#">Lista de Peliculas</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">...</a>
+          </div>
+        </li>
+        <li  class="nav-item dropdown">
+          <a id="a-cuenta" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Videos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="a-edit" class="dropdown-item" href="#">Nuevo Video</a>
+            <a class="dropdown-item" href="#">Lista de Videos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">...</a>
+          </div>
+        </li>
+        <li  class="nav-item dropdown">
+          <a id="a-cuenta" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Imagenes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="a-edit" class="dropdown-item" href="#">Nueva Imagen</a>
+            <a class="dropdown-item" href="#">Lista de Imagenes</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">...</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav justify-content-end">
+       
+        <li  class="nav-item dropdown">
+          <a id="a-cuenta" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cuenta
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="a-edit" class="dropdown-item" href="/admin/edit">Editar Cuenta</a>
+            <a class="dropdown-item" href="#">Campo 2</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/admin/login">Cerrar Sesión</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="/images/icon/iconoPeople.png" alt=""></a>
+          
+        </li>
+      </ul>
+    </div>
+  </nav>
+

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.row {
+    margin:0 auto;
+    margin-top: 5em;
+}
+h1{
+    text-align: center;
+    width: 100%;
+}
+
+.col-3 .card {
+    background-color: #6c9a8b;
+    padding: 1em;
+    color: #fffc;
+}
+
+#contact, #profile{
+    overflow: scroll;
+    height: 400px;
+}
+#home {
+    margin-left: 2em;
+}

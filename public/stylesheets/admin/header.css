@@ -1,0 +1,34 @@
+.navbar {
+    background-color: #6c9a8b;
+    box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.82);
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+  }
+  .nav a:hover {
+    color: #fffc;
+  }
+  /*.dropdown-menu a {
+      background-color: red;
+  }*/
+  .dropdown-menu a:hover {
+    color: rgb(187, 30, 30);
+    transition: .5s;
+    /*background-color: black;*/
+  }
+  strong{
+      color: #fff;
+  }
+  #user-login,
+  #password-login {
+    width: 9rem;
+    height: 1.6rem;
+    font-size: 0.8rem;
+  }
+  #password-login {
+    margin-left: 0.2em;
+  }
+  

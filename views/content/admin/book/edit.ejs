@@ -1,0 +1,117 @@
+<!--Incluyendo header-->
+<%- include('../admin/adminHeader'); -%>
+
+
+<link rel="stylesheet" href="/stylesheets/admin/book.css">
+<div class="form">
+    <h2>Editar Libro Digital</h2>
+    <form method="POST" action="/admin/book/insertar" enctype="multipart/form-data">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Titulo</span>
+        </div>
+        <input
+          required
+          id="titulo"
+          name="titulo"
+          type="text"
+          class="form-control"
+          placeholder="Introducción a la Filosofía"
+          aria-label="titulo"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Autor(es)</span>
+        </div>
+        <input
+          required
+          id="autor"
+          name="autor"
+          type="text"
+          class="form-control"
+          placeholder="James Rachels"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"
+            >Idioma</span
+          >
+        </div>
+        <input
+          id="idioma"
+          name="idioma"
+          type="text"
+          class="form-control"
+          placeholder="Inglés"
+          aria-label="idioma"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"
+            >Editorial</span
+          >
+        </div>
+        <input
+          id="editorial"
+          name="editorial"
+          type="text"
+          class="form-control"
+          placeholder="Primera edición en español 2007 - Hecho en México"
+          aria-label="editorial"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Páginas</span>
+        </div>
+        <input
+        id="paginas"
+        name="paginas"
+          type="text"
+          class="form-control"
+          placeholder="956"
+          aria-label="paginas"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">ISBN</span>
+        </div>
+        <input
+        id="isbn"
+        name="isbn"
+          type="text"
+          class="form-control"
+          placeholder="978-607-16-2082-8"
+          aria-label="isbn"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Tipo de Materia</span>
+        </div>
+     </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Suelte o inserte el archivo pdf</span>
+        </div>
+        <input id="filepdf" name="filepdf" type="file" class="file" data-preview-file-type="text" required>
+      </div>     
+      <div class="form-group" style="margin-top: 10px;">        
+        <button class="btn btn-success">Guardar</button>
+      </div>
+    </form>
+  </div>
+
+
+<%- include('../admin/adminFooter'); -%>

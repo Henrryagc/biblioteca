@@ -1,0 +1,338 @@
+<!--/images/pizza.jpg-->
+<div class="container">
+  <div class="row">
+    <img src="/images/img/fondo.png" style="width: 100%;margin: auto;" class="rounded" alt="Responsive image">
+  </div>
+<!--  ............ Buscar libro por    .................     -->
+  <div class="row" style="margin-top: .5rem;">
+    <form method="POST"  action="/listar/book" class="form-inline" style="width: 100%;">
+      <nav class="navbar navbar-black" style="width: 100%;">
+        <a style="color:#fff;font-weight:700;" class="navbar-brand">Buscar por :</a>
+        <div class="form-check">
+          <input name="titulo" type="checkbox" required>
+          <label class="form-check-label" for="defaultCheck1">
+            Titulo
+          </label>
+        </div>
+        <div class="form-check">
+          <input name="autor" class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+          <label class="form-check-label" for="defaultCheck2">
+            Autor
+          </label>
+        </div>
+        <div class="form-check">
+          <input name="editorial" class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+          <label class="form-check-label" for="defaultCheck3">
+            Editorial
+          </label>
+        </div>
+        <div class="form-check">
+          <input name="materia" class="form-check-input" type="checkbox" value="" id="defaultCheck5" >
+          <label class="form-check-label" for="defaultCheck5">
+            Materia
+          </label>
+        </div>
+          <input name="buscar"
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="titulo, autor, editorial, materia ..."
+            aria-label="Search"
+          />
+          <button class="btn btn-warning my-2 my-sm-0" type="submit">
+            Buscar
+          </button>
+      </nav>
+    </form>
+  </div>
+  <div class="row" style="margin:auto; margin-top: 1rem;">
+<!-- ########## Columna 1 #################### -->
+    <div class="col-3">
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+              Noticias
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapseOne"
+            class="collapse show"
+            aria-labelledby="headingOne"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+              <div id="noticias"  class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">Periódicos</a>
+                <a href="#" class="list-group-item list-group-item-action">Revistas</a>
+                <a href="#" class="list-group-item list-group-item-action">Canales</a>
+              </div>           
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Refranes
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapseTwo"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body">
+              <div class="alert alert-success" role="alert">
+                <h6 class="alert-heading">Nombre del autor</h6>
+                <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam fugiat necessitatibus voluptas illum. Omnis iste eos fuga deserunt pariatur ipsa facilis nostrum excepturi laboriosam. Obcaecati, incidunt.</p>
+                <hr>
+                <div class="text-muted" style="width: 100%;font-size:small;">
+                  Publicado hace 2 dias.
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-success" role="alert">
+                <h6 class="alert-heading">Nombre del autor</h6>
+                <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam fugiat necessitatibus voluptas illum. Omnis iste eos fuga deserunt pariatur ipsa facilis nostrum excepturi laboriosam. Obcaecati, incidunt.</p>
+                <hr>
+                <div class="text-muted" style="width: 100%;font-size:small;">
+                  Publicado hace 2 dias.
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-success" role="alert">
+                <h6 class="alert-heading">Nombre del autor</h6>
+                <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam fugiat necessitatibus voluptas illum. Omnis iste eos fuga deserunt pariatur ipsa facilis nostrum excepturi laboriosam. Obcaecati, incidunt.</p>
+                <hr>
+                <div class="text-muted" style="width: 100%;font-size:small;">
+                  Publicado hace 2 dias.
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-success" role="alert">
+                <h6 class="alert-heading">Nombre del autor</h6>
+                <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam fugiat necessitatibus voluptas illum. Omnis iste eos fuga deserunt pariatur ipsa facilis nostrum excepturi laboriosam. Obcaecati, incidunt.</p>
+                <hr>
+                <div class="text-muted" style="width: 100%;font-size:small;">
+                  Publicado hace 2 dias.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Frases
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapseThree"
+            class="collapse"
+            aria-labelledby="headingThree"
+            data-parent="#accordionExample"
+          >
+            <div class="card-body" style="padding: 0;">
+              <div class="card-body" style="padding: .2em;">
+                <div class="alert alert-primary" role="alert">
+                  <h6 class="alert-heading">Nombre del autor</h6>
+                  <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam.</p>
+                  <hr>
+                  <div class="text-muted" style="width: 100%;font-size:small;">
+                    Publicado hace 2 dias.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="card-body" style="padding: .2em;">
+                <div class="alert alert-primary" role="alert">
+                  <h6 class="alert-heading">Nombre del autor</h6>
+                  <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam.</p>
+                  <hr>
+                  <div class="text-muted" style="width: 100%;font-size:small;">
+                    Publicado hace 2 dias.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="card-body" style="padding: .2em;">
+                <div class="alert alert-primary" role="alert">
+                  <h6 class="alert-heading">Nombre del autor</h6>
+                  <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam.</p>
+                  <hr>
+                  <div class="text-muted" style="width: 100%;font-size:small;">
+                    Publicado hace 2 dias.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="card-body" style="padding: .2em;">
+                <div class="alert alert-primary" role="alert">
+                  <h6 class="alert-heading">Nombre del autor</h6>
+                  <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam.</p>
+                  <hr>
+                  <div class="text-muted" style="width: 100%;font-size:small;">
+                    Publicado hace 2 dias.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="card-body" style="padding: .2em;">
+                <div class="alert alert-primary" role="alert">
+                  <h6 class="alert-heading">Nombre del autor</h6>
+                  <p style="font-size:small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat veritatis et nam aperiam.</p>
+                  <hr>
+                  <div class="text-muted" style="width: 100%;font-size:small;">
+                    Publicado hace 2 dias.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<!-- ################ Columan 2  #################-->
+    <div id="content-libros"  class="col-6 mylista">
+      <h2>Listado de libros</h2>
+      <% productos.forEach(producto => { %>
+            <div class='card card1 mb-3'>
+              <div class='row'>
+                <div class='col-md-4'>
+                  <img src='/images/img/book.png' class='card-img'/>
+                </div>
+                <div class='col-md-8'>
+                  <div class='card-body'>
+                    <h5 class='card-title'><%= producto.nombre %></h5>
+                    <p class='card-text'>
+                      <ul>
+                        <li><%= producto.titulo %></li>
+                        <li><%= producto.autor %></li>
+                        <li><%= producto.paginas %></li>
+                        <li><%= producto.idioma %></li>
+                      </ul>
+                    </p>
+                    <p class='card-text'>
+                      <div class='text-muted bg-info rounded'>
+                        <a href='/book/name/<%= producto.codLibro %>'>Leer</a>
+                      </div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      <% })%>
+      <!-- el script para listar esta en /code/listBook.js -->
+      <div id="paginar" class="pagination"></div>
+      <!--Paginattion
+      <nav id="paginar">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#">Anterior</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item" aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" onclick="getTotalRegs()">Siguiente</a>
+          </li>
+        </ul>
+      </nav>
+    </div>-->
+  </div>
+      <!--Contenido Fotos-->
+      <%- include('index/fotos'); -%>
+    
+      <!--Contenido Computo-->
+      <%- include('index/computo'); -%>
+  
+      <!--Contenido Videos-->
+      <%- include('index/videos'); -%>
+    
+      <!--Contenido Peliculas-->
+      <%- include('index/peliculas'); -%>
+
+  <div class="row">
+        <!--Columna 3-->
+        <div class="col-2">
+          <div class="card" style="width: 14rem;">
+            <img src="/images/img/book2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Libros</h5>
+              <p class="card-text">Banco de libros...</p>
+              <a id="a-libros" href="#" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 14rem; margin-top: 1rem;">
+            <img src="/images/img/imagen.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Fotos</h5>
+              <p class="card-text">Banco de imágenes...</p>
+              <a id="a-fotos" href="#" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 14rem; margin-top: 1rem;">
+            <img src="/images/img/codigo.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Computo</h5>
+              <p class="card-text">Banco de códigos y algoritmos...</p>
+              <a id="a-computo" href="#" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 14rem;margin-top: 1rem;">
+            <img src="/images/img/pelicula.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Videos</h5>
+              <p class="card-text">Banco de videos de los cursos...</p>
+              <a id="a-videos" href="#" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 14rem;margin-top: 1rem;">
+            <img src="/images/img/video.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Películas</h5>
+              <p class="card-text">Banco de películas...</p>
+              <a id="a-peliculas" href="#" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

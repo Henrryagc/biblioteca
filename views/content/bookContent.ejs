@@ -1,0 +1,170 @@
+<!-- Book configure-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/book2.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!--Incluyendo header-->
+    <%- include('../layouts/bookHeader'); -%>
+    <div hidden>
+      <!-- El input almacenara el codigo de libro para poder buscarlo en las carpetas y as abrir el pdf-->
+      <input id="bookName" type="text" value="<%= bookName %>" />
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <h1>Contenido del Libro</h1>
+        <div class="card">
+          <h3>Resumen</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+            quasi incidunt harum quam labore sit sequi perspiciatis. Incidunt
+            dignissimos animi corrupti! Cupiditate, soluta magni asperiores
+            molestiae ratione sequi quasi. Vitae?
+          </p>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+          <h5 class="card-title">Detalles del Libro</h5>
+          <p class="card-text">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Datos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Frases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Criticas</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <p>
+                  <ul>
+                    <li>Titulo : <b>Bachelard El Compromiso Racionalista</b></li>
+                    <li>Autor : <b>Gaston Bachelard</b></li>
+                    <li>Paginas : <b>176</b></li>
+                    <li>Editorial : <b>Siglo Ventiuno</b></li>
+                    <li>Paginas : <b>176</b></li>
+                    <li>ISB : <b>176-6456-5612</b></li>
+                    <li>Edicion : <b>Septima Edicion</b></li>
+                    <li>Idioma : <b>Español</b></li>
+                  </ul>
+                </p>
+              </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="card border-light mb-3" style="max-width: 18rem; margin-top: 2em;">
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo de la frase</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo de la frase</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo de la frase</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo de la frase</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo de la frase</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>             
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                <div class="card bg-light mb-3" style="max-width: 18rem;color:#000c;margin-top: 1em;">
+                  <div class="card-header">Lupe Coronado</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo critica</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><small class="text-muted">Publicado: 24-12-2001</small></p>
+                  </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 18rem;color:#000c">
+                  <div class="card-header">Lupe Coronado</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo critica</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><small class="text-muted">Publicado: 24-12-2001</small></p>
+                  </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 18rem;color:#000c">
+                  <div class="card-header">Lupe Coronado</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo critica</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><small class="text-muted">Publicado: 24-12-2001</small></p>
+                  </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 18rem;color:#000c">
+                  <div class="card-header">Lupe Coronado</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo critica</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><small class="text-muted">Publicado: 24-12-2001</small></p>
+                  </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 18rem;color:#000c">
+                  <div class="card-header">Lupe Coronado</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo critica</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><small class="text-muted">Publicado: 24-12-2001</small></p>
+                  </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 18rem;color:#000c">
+                  <div class="card-header">Lupe Coronado</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo critica</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><small class="text-muted">Publicado: 24-12-2001</small></p>
+                  </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 18rem;color:#000c">
+                  <div class="card-header">Lupe Coronado</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Titulo critica</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><small class="text-muted">Publicado: 24-12-2001</small></p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="card">
+          <div id="view" style="height: 1010px"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/javascripts/jquery-3.5.1.slim.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/popper.min.js"></script>
+    <script src="/javascripts/pdfobject.min.js"></script>
+    <script src="/javascripts/main/frmmain.js"></script>
+    <script src="/javascripts/archivos/frmbook.js"></script>
+  </body>
+</html>
