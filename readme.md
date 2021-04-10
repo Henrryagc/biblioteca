@@ -1,4 +1,4 @@
-![img](/phots/img.png)
+![img](https://github.com/Henrryagc/biblioteca/blob/master/screenshots/b-inicio.png)
 ![img](photos)
 
 info pool connection
